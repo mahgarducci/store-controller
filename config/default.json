@@ -1,0 +1,36 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "mN8aYuRSKcGsAw4A1RT1Gw+OHd4=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "3h"
+    },
+    "local": {
+      "usernameField": "user",
+      "passwordField": "password"
+    }
+  },
+  "mysql_user": "root",
+  "mysql_pass": "ico!@#",
+  "mysql_host": "localhost",
+  "mysql_port": "3306",
+  "mysql_schema": "store_controller"
+}
